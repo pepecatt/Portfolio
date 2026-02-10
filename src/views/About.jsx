@@ -141,8 +141,8 @@ function AboutView() {
                 GitHub
               </li>
               <li>
-                <img src="src\icons\icons3\vs-code-svgrepo-com.svg"></img>VS
-                Code
+                <img src="src\icons\icons3\vs-code-svgrepo-com.svg"></img>
+                VS Code
               </li>
               <li>
                 <img src="src\icons\icons3\intellij-svgrepo-com.svg"></img>

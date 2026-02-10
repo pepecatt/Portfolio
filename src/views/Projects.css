@@ -8,6 +8,7 @@
   flex-direction: column;
   margin: 0px auto;
   gap: 15px;
+  padding-bottom: 200px;
 }
 
 .project-card {
@@ -31,13 +32,10 @@
   flex-direction: column;
 }
 
-.project-card-text p:not(.read-more) {
-  margin-top: 10px;
-}
-
 .project-skills {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: flex-start;
   gap: 8px;
   list-style: none;
@@ -61,10 +59,45 @@
   border-radius: 0;
 }
 
-.read-more {
-  margin-top: auto;
+.project-card a {
   font-size: 16px;
   cursor: pointer;
+  color: black;
+  text-decoration: underline;
+  margin-top: auto;
 }
 
+.project-card .link-margin {
+  margin-top: 20px;
+}
 
+#schematics {
+  grid-column: 1 / -1;
+  max-width: 100%;
+  padding: 0px 20px;
+}
+
+#schematics li {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#schematics img {
+  border-radius: 0px;
+}
+
+#schematics li.pcb12 {
+  display: flex;
+  flex-direction: row;
+}
+
+#schematics li.pcb12 img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.project-card .bulleted-list {
+  margin-left: 15px;
+}
