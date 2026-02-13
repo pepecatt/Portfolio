@@ -7,57 +7,65 @@ function AboutView() {
       <Navbar />
       <div className="main-page">
         <section id="hero" className="hero">
-          <div className="hero-left">
-            <img className="portrait" src="/src/images/portrait.jpeg"></img>
-            <div className="hero-buttons">
-              <a className="resume-btn" href="" target="_blank">
-                <img
-                  className="resume"
-                  src="src\icons\apps\download-minimalistic-svgrepo-com.svg"
-                ></img>
-                Resume
-              </a>
-              <button
-                href="https://www.linkedin.com/in/catherine-huang-3b6449348/"
-                target="_blank"
-              >
-                <img
-                  className="linkedin"
-                  src="src\icons\apps\linkedin-svgrepo-com.svg"
-                ></img>
-              </button>
-              <button href="https://github.com/pepecatt" target="_blank">
-                <img
-                  className="github"
-                  src="src\icons\apps\github-142-svgrepo-com.svg"
-                ></img>
-              </button>
-              <button href="mailto:c365huan@uwaterloo.ca" target="_blank">
-                <img
-                  className="email"
-                  src="src\icons\apps\mail-svgrepo-com.svg"
-                ></img>
-              </button>
+          <div className="hero-container">
+            <div className="hero-left">
+              <img className="portrait" src="/src/images/portrait.jpeg"></img>
+              <div className="hero-buttons">
+                <a
+                  className="resume-btn"
+                  href="src\images\CatherineHuang_Resume.pdf"
+                  download
+                  target="_blank"
+                >
+                  <img
+                    className="resume"
+                    src="src\icons\apps\download-minimalistic-svgrepo-com.svg"
+                  ></img>
+                  Resume
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/catherine-huang-3b6449348/"
+                  target="_blank"
+                >
+                  <img
+                    className="linkedin"
+                    src="src\icons\apps\linkedin-svgrepo-com.svg"
+                  ></img>
+                </a>
+                <a href="https://github.com/pepecatt" target="_blank">
+                  <img
+                    className="github"
+                    src="src\icons\apps\github-142-svgrepo-com.svg"
+                  ></img>
+                </a>
+                <a href="mailto:c365huan@uwaterloo.ca" target="_blank">
+                  <img
+                    className="email"
+                    src="src\icons\apps\mail-svgrepo-com.svg"
+                  ></img>
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="hero-right">
-            <h1 className="name1">Catherine</h1>
-            <h1 className="name2">Huang</h1>
-            <p className="about-me">
-              Nanotechnology Engineering student at the University of Waterloo,
-              I'm curious and excited to explore everything my degree offers!
-              I'm passionate about learning and trying new things, getting out
-              of my comfort zone and becoming the best version of myself.
-            </p>
-            <p className="about-me2">
-              One of the ways I'm working towards that is by gaining new skills,
-              whether it's through student design teams or my own personal
-              projects (such as this website!)
-            </p>
-            <p className="about-me3">
-              In my free time, I like listening to music, reading fantasy and
-              mystery novels, and drinking bubble tea!
-            </p>
+            <div className="hero-right">
+              <h1 className="name1">Catherine</h1>
+              <h1 className="name2">Huang</h1>
+              <p className="about-me">
+                Nanotechnology Engineering student at the University of
+                Waterloo, I'm curious and excited to explore everything my
+                degree offers! I'm passionate about learning and trying new
+                things, getting out of my comfort zone and becoming the best
+                version of myself.
+              </p>
+              <p className="about-me2">
+                One of the ways I'm working towards that is by gaining new
+                skills, whether it's through student design teams or my own
+                personal projects (such as this website!)
+              </p>
+              <p className="about-me3">
+                In my free time, I like listening to music, reading fantasy
+                novels, and drinking matcha!
+              </p>
+            </div>
           </div>
         </section>
 
@@ -194,11 +202,11 @@ function AboutView() {
           </div>
         </section>
 
-        <section id="projects" href="projects">
+        <section id="projects">
           <h1>Featured Projects</h1>
           <div className="projects-div">
             <div className="featproject-card">
-              <img src="src\images\proj-electrium\mergedlights.jpg"></img>
+              <img src="src\images\proj-electrium\pcb3dview.jpg"></img>
               <h3>Electric Skateboard Tail Light System</h3>
               <p>
                 Designed and implemented the tail light system using the
@@ -206,31 +214,42 @@ function AboutView() {
                 components, verified functionality using a multimeter and
                 oscilloscope.
               </p>
-              <p className="read-more"> Schematics and more →</p>
+              <a className="read-more" href="/projects">
+                {" "}
+                Schematics and more →
+              </a>
             </div>
             <div className="featproject-card">
-              <img src="src\images\proj-electrium\pcb.jpeg"></img>
-              <h3>This Website</h3>
+              <img src="src\images\proj-imdbwebapp\imdbweb.png"></img>
+              <h3>Film Database Web Application</h3>
               <p>
-                A self-coded portfolio website to showcase my skills and projects. A fun
-                passion project!
+                Displays movie data using the IMDb API, replicating core
+                functionality of a streaming service interface, integrated
+                Firebase Authentication
               </p>
-              <p className="read-more">GitHub link →</p>
+              <a
+                className="read-more"
+                href="/projects/#filmweb"
+              >
+                Read more →
+              </a>
             </div>
             <div className="featproject-card">
-              <img src="src\images\proj-electrium\pcb.jpeg"></img>
+              <img src="src\images\proj\stm32.png"></img>
               <h3>(Current) Aircraft Embedded Flight Software</h3>
               <p>
                 Program the team’s custom autopilot, ZeroPilot, and verify
                 flight control functionality using C, C++, and STM32-based
-                hardware.
+                hardware
               </p>
-              <p className="read-more">Read more →</p>
+              <a href="/projects/#efs" className="read-more">
+                Read more →
+              </a>
             </div>
           </div>
         </section>
 
-        <section id="experience" href="experience">
+        <section id="experience">
           <h1>Experience</h1>
           <div className="experience-cards-div">
             <div className="experience-card">
@@ -263,10 +282,6 @@ function AboutView() {
                   </a>
                 </ul>
               </div>
-              <img
-                className="experience-img"
-                src="src\images\deardaisie website.png"
-              ></img>
             </div>
             <div className="experience-card">
               <div className="experience-text">
@@ -294,10 +309,6 @@ function AboutView() {
                   </li>
                 </ul>
               </div>
-              <img
-                className="experience-img"
-                src="src\images\deardaisie website.png"
-              ></img>
             </div>
           </div>
         </section>

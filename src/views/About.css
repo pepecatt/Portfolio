@@ -1,29 +1,42 @@
 :root {
   --primary-colour: pink;
-  --max-width: 1200px;
-  --max-width-hero-right: 600px;
-  --max-width-skills: 1100px;
+  --max-width: 1100px;
   --max-width-skills-col: 230px;
-  --section-margin-top: 60px;
-  --max-width-featproject-card: 400px;
-  --text-colour: black;
+  --section-padding: 120px 0px;
   --img-border-radius: 20px;
+
+  --bg: #F5F3EF;
+  --bg-secondary: #ECE8E1;
+  --text-primary: #1F1F1F;
+  --accent: #4C5C75;
+  --accent-light: #cfdcd4;
+  --border-color: #E3DED6;
 }
 
 .main-page {
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 0px 20px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
 }
 
 #hero p {
-  color: var(--text-colour);
+  color: var(--text-primary);
 }
 
 /* --------- HERO SECTION ---------- */
 #hero {
+  padding: 170px 0px;
+}
+
+.hero-container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 100px 100px;
+  padding: 0 40px;
+
   display: grid;
   grid-template-columns: 370px 1fr;
   gap: 80px;
@@ -57,8 +70,7 @@
   margin-right: 10px;
 }
 
-#hero button {
-  border: none;
+.hero-buttons a {
   cursor: pointer;
   background-color: inherit;
   transition: transform 0.7s ease-in-out;
@@ -71,15 +83,19 @@
   gap: 5px;
 
   padding: 7px 16px;
-  border: 2px solid black;
   border-radius: var(--img-border-radius);
 
   text-decoration: none;
   background: none;
+  border: 2px solid var(--accent);
 
   font-size: 16px;
-  transition: transform 0.7s ease-in-out;
   opacity: 100%;
+}
+.resume-btn:hover {
+  color: white;
+  background: var(--accent);
+  transition: 0.2s ease;
 }
 
 .resume {
@@ -102,14 +118,14 @@
   object-fit: cover;
 }
 
-#hero button:hover {
-  opacity: 80%;
-  transition: 0.3s ease;
+#hero a:hover:not(.resume-btn) {
+  opacity: 70%;
+  transition: 0.2s ease;
 }
 
 /* RIGHT COLUMN */
 .hero-right {
-  max-width: var(--max-width-hero-right);
+  max-width: 600px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap");
@@ -120,20 +136,20 @@
   font-size: 75px;
   font-weight: 500;
   line-height: 1;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   text-align: left;
 }
 
 .name2 {
-  margin-top: 5px;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
   text-align: right;
+  margin-right: 30px;
 }
 
 p {
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .about-me2,
@@ -143,10 +159,10 @@ p {
 
 /* ---------------- SKILLS ----------------- */
 #skills {
-  max-width: var(--max-width-skills);
-  margin: 0px auto;
-  margin-top: var(--section-margin-top);
-  padding: 50px 40px;
+  max-width: var(--max-width);
+  margin: 0 auto 20px auto;
+  padding: var(--section-padding);
+  border-top: 1px solid var(--border-color);
 }
 
 h1 {
@@ -155,10 +171,11 @@ h1 {
   text-align: center;
   font-weight: 600;
   margin-bottom: 20px;
+  color: var(--text-primary);
 }
 
 #skills p {
-  margin: 0px 0px 20px calc(var(--max-width-skills-col) + 5px);
+  padding: 0 40px;
   font-size: 18px;
 }
 
@@ -182,16 +199,19 @@ h3 {
 }
 
 .skills-div {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
   display: grid;
   grid-template-columns: var(--max-width-skills-col) 1fr;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .skills-icons, .skills-hl {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px 10px;
+  gap: 18px 12px;
   align-items: center;
 }
 
@@ -214,29 +234,34 @@ h3 {
   background-color: rgb(255, 255, 202);
 }
 
-/* ---------------- PROJECTS ----------------- */
+/* ------------------ PROJECTS ------------------- */
 #projects {
-  max-width: calc(var(--max-width) + 100px);
+  max-width: var(--max-width);
   margin: 0px auto;
-  margin-top: var(--section-margin-top);
-  padding: 80px 0px;
+  padding: var(--section-padding);
+  border-top: 1px solid var(--border-color);
 }
 
 .projects-div {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px 20px;
+  gap: 30px 7px;
 }
 
 .featproject-card {
   display: flex;
   flex-direction: column;
-  max-width: var(--max-width-featproject-card);
-  border: 1px solid black;
-  background-color: rgb(244, 244, 244);
+  max-width: 360px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
   border-radius: var(--img-border-radius);
-  padding: 15px;
+  padding: 20px;
+  transition: 0.2s ease;
+}
+.featproject-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
 }
 
 .featproject-card img {
@@ -258,25 +283,33 @@ h3 {
 
 .read-more {
   margin-top: auto;
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer;
+  text-decoration: none;
+  color: var(--accent);
+  display: inline-flex;
+  width: fit-content;
+}
+.read-more:hover {
   text-decoration: underline;
 }
 
 .featproject-card h3 {
   font-size: 18px;
+  margin-bottom: 2px;
 }
 
-/* ------------ EXPERIENCE -------------*/
+/* --------------- EXPERIENCE ---------------*/
 #experience {
   max-width: var(--max-width);
-  margin: 0px auto;
-  margin-top: var(--section-margin-top);
-  padding: 50px 40px;
-  margin-bottom: 200px;
+  margin: 0 auto 20px auto;
+  padding: var(--section-padding);
+  margin-bottom: 120px;
+  border-top: 1px solid var(--border-color);
 }
 
 .experience-cards-div {
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -284,10 +317,10 @@ h3 {
 
 .experience-card {
   display: grid;
-  grid-template-columns: 1fr 370px;
-  background-color: rgb(255, 237, 240);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
   border-radius: var(--img-border-radius);
-  padding: 20px;
+  padding: 25px;
 }
 
 .experience-text {
@@ -296,8 +329,7 @@ h3 {
 
 .deardaisie-logo {
   width: 150px;
-  margin-bottom: -5px;
-  margin-left: -3px;
+  margin: 5px 0px -5px -3px;
 }
 
 .experience-info {
@@ -321,4 +353,9 @@ h3 {
 h2 {
   font-size: 20px;
   font-weight: 600;
+}
+
+.featproject-card,
+.experience-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
