@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import "./Projects.css";
+import { assets } from "../assets";
 
 function ProjectsView() {
   const [showSchematics, setShowSchematics] = useState(false);
@@ -38,7 +39,7 @@ function ProjectsView() {
                 <li>Microcontrollers: ATmega328P</li>
                 <li>Soldering </li>
                 <li>
-                  <img src="src\icons\icons3\KiCad-Logo.svg"></img>
+                  <img src={assets.icons.kicadIcon}></img>
                   KiCad
                 </li>
               </ul>
@@ -53,34 +54,34 @@ function ProjectsView() {
             </div>
           </div>
 
-          <img src="src\images\proj-electrium\pcb3dview.jpg"></img>
+          <img src={assets.electrium.pcb3DView}></img>
 
           {showSchematics && (
             <div id="showmore">
               <li>
                 Tail lights schematic
-                <img src="src\images\proj-electrium\tailschematic.png" />
+                <img src={assets.electrium.tailSchematic} />
               </li>
               <li>
                 Merged schematic (version 1): head lights and tail lights onto
                 one PCB, worked with partner
-                <img src="src\images\proj-electrium\mergedschematic.png" />
+                <img src={assets.electrium.mergedSchematic} />
               </li>
               <li>
                 Final schematic
-                <img src="src\images\proj-electrium\finalschematic.png" />
+                <img src={assets.electrium.finalSchematic} />
               </li>
               <li>
                 PCB editor view
-                <img src="src\images\proj-electrium\pcbeditor.png" />
+                <img src={assets.electrium.pcbEditor} />
               </li>
               <li>
                 physical PCB
-                <img src="src\images\proj-electrium\pcb.jpeg" />
+                <img src={assets.electrium.pcbPhysical} />
               </li>
               <li className="pcb12">
-                <img src="src\images\proj-electrium\pcb1.jpeg" />
-                <img src="src\images\proj-electrium\pcb2.jpeg" />
+                <img src={assets.electrium.pcb1} />
+                <img src={assets.electrium.pcb2} />
               </li>
               <a href="#top" onClick={() => setShowSchematics((prev) => !prev)}>
                 Hide ↑
@@ -99,33 +100,11 @@ function ProjectsView() {
                 Firebase Authentication
               </p>
               <ul className="project-skills">
-                <li>
-                  <img src="src\icons\icons1\python-svgrepo-com.svg" />
-                  Python
-                </li>
-                <li>
-                  <img src="src\icons\icons2\react-svgrepo-com.svg" />
-                  React
-                </li>
-                <li>
-                  <img src="src\icons\icons3\vs-code-svgrepo-com.svg"></img>
-                  VS Code
-                </li>
-                <li>
-                  <img src="src\icons\icons2\firebase.svg"></img>Firebase Auth
-                </li>
-                <li>
-                  <img src="src\icons\icons1\html-5-svgrepo-com.svg" />
-                  HTML
-                </li>
-                <li>
-                  <img src="src\icons\icons1\css-3-svgrepo-com.svg" />
-                  CSS
-                </li>
-                <li>
-                  <img src="src\icons\icons1\javascript-svgrepo-com.svg" />
-                  JavaScript
-                </li>
+                <li><img src={assets.skills.reactIcon} alt="React" />React</li>
+              <li><img src={assets.skills.firebaseIcon} alt="Firebase" />Firebase</li>
+              <li><img src={assets.skills.htmlIcon} alt="HTML" />HTML</li>
+              <li><img src={assets.skills.cssIcon} alt="CSS" />CSS</li>
+              <li><img src={assets.skills.jsIcon} alt="JS" />JavaScript</li>
               </ul>
             </div>
 
@@ -133,6 +112,7 @@ function ProjectsView() {
               <a
                 href="https://github.com/pepecatt/IMDb-Web-App"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Github link
               </a>
@@ -146,13 +126,13 @@ function ProjectsView() {
             </div>
           </div>
 
-          <img src="src\images\proj-imdbwebapp\imdbweb.png"></img>
+          <img src={assets.imdb.imdbWeb}></img>
 
           {showFilmWeb && (
             <div id="showmore">
               <li>
                 Home view
-                <img src="src\images\proj-imdbwebapp\homeview.png" />
+                <img src={assets.imdb.homeView} />
               </li>
               <li>
                 <p>
@@ -160,8 +140,8 @@ function ProjectsView() {
                   used)
                 </p>
                 <li className="pcb12">
-                  <img src="src\images\proj-imdbwebapp\signupview.png" />
-                  <img src="src\images\proj-imdbwebapp\loginview.png" />
+                  <img src={assets.imdb.signupView} />
+                  <img src={assets.imdb.loginView} />
                 </li>
               </li>
               <li>
@@ -169,20 +149,20 @@ function ProjectsView() {
                   After signup/login -{">"} Movies view - can add movies to
                   cart
                 </p>
-                <img src="src\images\proj-imdbwebapp\imdbweb.png" />
+                <img src={assets.imdb.imdbWeb} />
               </li>
               <li>
                 Cart view - can "Checkout"
-                <img src="src\images\proj-imdbwebapp\cartview.png" />
+                <img src={assets.imdb.cartView} />
               </li>
               <li>
                 Selected genres and movies that are "checked out" will save to
                 account
-                <img src="src\images\proj-imdbwebapp\firebase.png" />
+                <img src={assets.imdb.firebaseView} />
               </li>
               <li>
                 Settings view - where selected genres can be changed
-                <img src="src\images\proj-imdbwebapp\settingsview.png" />
+                <img src={assets.imdb.settingsView} />
               </li>
               <a href="#top" onClick={() => setShowFilmWeb((prev) => !prev)}>
                 Hide ↑
@@ -215,10 +195,10 @@ function ProjectsView() {
               </div>
               <ul className="project-skills">
                 <li className="learning">
-                  <img src="src\icons\icons1\C_Programming_Language.svg" />C
+                  <img src={assets.skills.cIcon} />C
                 </li>
                 <li className="learning">
-                  <img src="src\icons\icons1\C++_Logo.svg" />
+                  <img src={assets.skills.cppIcon} />
                   C++
                 </li>
                 <li>Microcontrollers: STM32</li>
@@ -226,10 +206,10 @@ function ProjectsView() {
             </div>
 
             <div className="project-links">
-              <a target="_blank"> Github link</a>
+              <a target="_blank" rel="noopener noreferrer"> Github link</a>
             </div>
           </div>
-          <img src="src\images\proj\stm32.png"></img>
+          <img src={assets.projects.stm32Img}></img>
         </div>
 
         <div className="project-card">
@@ -242,31 +222,31 @@ function ProjectsView() {
               </p>
               <ul className="project-skills">
                 <li>
-                  <img src="src\icons\icons2\react-svgrepo-com.svg" />
+                  <img src={assets.skills.reactIcon} />
                   React
                 </li>
                 <li>
-                  <img src="src\icons\icons1\html-5-svgrepo-com.svg" />
+                  <img src={assets.skills.htmlIcon} />
                   HTML
                 </li>
                 <li>
-                  <img src="src\icons\icons1\css-3-svgrepo-com.svg" />
+                  <img src={assets.skills.cssIcon} />
                   CSS
                 </li>
                 <li>
-                  <img src="src\icons\icons1\javascript-svgrepo-com.svg" />
+                  <img src={assets.skills.jsIcon} />
                   JavaScript
                 </li>
               </ul>
             </div>
 
             <div className="project-links">
-              <a href="https://github.com/pepecatt/Portfolio" target="_blank">
+              <a href="https://github.com/pepecatt/Portfolio" target="_blank" rel="noopener noreferrer">
                 Github link
               </a>
             </div>
           </div>
-          <img src="src\images\proj\website.png"></img>
+          <img src={assets.projects.websiteImg}></img>
         </div>
 
         <div className="project-card">
@@ -299,13 +279,13 @@ function ProjectsView() {
             <div className="project-links">
               <a
                 href="https://uwaterloo.ca/engineering/news/students-design-quality-life-solutions-habitat"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 Results posted by UWaterloo (and our final video submission)
               </a>
             </div>
           </div>
-          <img src="src\images\proj\hackathon.png"></img>
+          <img src={assets.projects.hackathonImg}></img>
         </div>
 
         <div className="project-card">
@@ -319,11 +299,11 @@ function ProjectsView() {
               </p>
               <ul className="project-skills">
                 <li>
-                  <img src="src\icons\icons2\numpy-svgrepo-com.svg" />
+                  <img src={assets.skills.numpyIcon} />
                   Numpy
                 </li>
                 <li>
-                  <img src="src\icons\icons2\pandas-svgrepo-com.svg" />
+                  <img src={assets.skills.pandasIcon} />
                   Pandas
                 </li>
               </ul>
@@ -332,14 +312,18 @@ function ProjectsView() {
               <a
                 href="https://github.com/pepecatt/Streamlit-Web-App"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Github link
               </a>
             </div>
           </div>
-          <img src="src\images\proj\streamlit.png"></img>
+          <img src={assets.projects.streamlitImg}></img>
         </div>
       </div>
+      <footer className="footer">
+          <p>© 2026 Catherine Huang · Built with React</p>
+        </footer>
     </>
   );
 }

@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import "./About.css";
+import { assets } from "../assets";
 
 function AboutView() {
   return (
@@ -9,40 +10,40 @@ function AboutView() {
         <section id="hero" className="hero">
           <div className="hero-container">
             <div className="hero-left">
-              <img className="portrait" src="/src/images/portrait.jpeg"></img>
+              <img className="portrait" src={assets.about.portrait}></img>
               <div className="hero-buttons">
                 <a
                   className="resume-btn"
-                  href="src\images\CatherineHuang_Resume.pdf"
-                  download
+                  href={assets.about.resumePDF}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <img
-                    className="resume"
-                    src="src\icons\apps\download-minimalistic-svgrepo-com.svg"
-                  ></img>
+                  <img className="resume" src={assets.about.downloadIcon}></img>
                   Resume
                 </a>
                 <a
                   href="https://www.linkedin.com/in/catherine-huang-3b6449348/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <img
                     className="linkedin"
-                    src="src\icons\apps\linkedin-svgrepo-com.svg"
+                    src={assets.about.linkedinIcon}
                   ></img>
                 </a>
-                <a href="https://github.com/pepecatt" target="_blank">
-                  <img
-                    className="github"
-                    src="src\icons\apps\github-142-svgrepo-com.svg"
-                  ></img>
+                <a
+                  href="https://github.com/pepecatt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img className="github" src={assets.about.githubIcon}></img>
                 </a>
-                <a href="mailto:c365huan@uwaterloo.ca" target="_blank">
-                  <img
-                    className="email"
-                    src="src\icons\apps\mail-svgrepo-com.svg"
-                  ></img>
+                <a
+                  href="mailto:c365huan@uwaterloo.ca"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img className="email" src={assets.about.emailIcon}></img>
                 </a>
               </div>
             </div>
@@ -76,30 +77,30 @@ function AboutView() {
             <h3>Programming</h3>
             <ul className="skills-icons">
               <li>
-                <img src="src\icons\icons1\java-svgrepo-com.svg" />
+                <img src={assets.skills.javaIcon} alt="Java" />
                 Java
               </li>
               <li>
-                <img src="src\icons\icons1\python-svgrepo-com.svg" />
+                <img src={assets.skills.pythonIcon} alt="Python" />
                 Python
               </li>
               <li className="learning">
-                <img src="src\icons\icons1\C_Programming_Language.svg" />C
+                <img src={assets.skills.cIcon} alt="C" />C
               </li>
               <li className="learning">
-                <img src="src\icons\icons1\C++_Logo.svg" />
+                <img src={assets.skills.cppIcon} alt="C++" />
                 C++
               </li>
               <li>
-                <img src="src\icons\icons1\html-5-svgrepo-com.svg" />
+                <img src={assets.skills.htmlIcon} alt="HTML" />
                 HTML
               </li>
               <li>
-                <img src="src\icons\icons1\css-3-svgrepo-com.svg" />
+                <img src={assets.skills.cssIcon} alt="CSS" />
                 CSS
               </li>
               <li>
-                <img src="src\icons\icons1\javascript-svgrepo-com.svg" />
+                <img src={assets.skills.jsIcon} alt="JavaScript" />
                 JavaScript
               </li>
             </ul>
@@ -108,22 +109,24 @@ function AboutView() {
             <h3>Frameworks & Tools</h3>
             <ul className="skills-icons">
               <li>
-                <img src="src\icons\icons2\react-svgrepo-com.svg" />
+                <img src={assets.skills.reactIcon} alt="React" />
                 React
               </li>
               <li>
-                <img src="src\icons\icons2\numpy-svgrepo-com.svg" />
+                <img src={assets.skills.numpyIcon} alt="Numpy" />
                 Numpy
               </li>
               <li>
-                <img src="src\icons\icons2\pandas-svgrepo-com.svg" />
+                <img src={assets.skills.pandasIcon} alt="Pandas" />
                 Pandas
               </li>
               <li>
-                <img src="src\icons\icons2\firebase.svg"></img>Firebase Auth
+                <img src={assets.skills.firebaseIcon} alt="Firebase" />
+                Firebase Auth
               </li>
               <li>
-                <img src="src\icons\icons2\imdb-svgrepo-com.svg"></img>IMDb API
+                <img src={assets.skills.imdbIcon} alt="IMDb API" />
+                IMDb API
               </li>
             </ul>
           </div>
@@ -131,52 +134,56 @@ function AboutView() {
             <h3>Software</h3>
             <ul className="skills-icons">
               <li>
-                <img src="src\icons\icons3\solidworks.svg"></img>SolidWorks
+                <img src={assets.skills.solidworksIcon} alt="SolidWorks" />
+                SolidWorks
               </li>
               <li className="learning">
-                <img src="src\icons\icons3\matlab-svgrepo-com.svg"></img>
+                <img src={assets.skills.matlabIcon} alt="MATLAB" />
                 MATLAB
               </li>
               <li>
-                <img src="src\icons\icons3\excel-svgrepo-com.svg"></img>
+                <img src={assets.skills.excelIcon} alt="Excel" />
                 Excel
               </li>
               <li>
-                <img src="src\icons\icons3\word-svgrepo-com.svg"></img>Word
+                <img src={assets.skills.wordIcon} alt="Word" />
+                Word
               </li>
               <li>
-                <img src="src\icons\icons3\git-svgrepo-com.svg"></img>Git &
-                GitHub
+                <img src={assets.skills.gitIcon} alt="Git" />
+                Git & GitHub
               </li>
               <li>
-                <img src="src\icons\icons3\vs-code-svgrepo-com.svg"></img>
+                <img src={assets.skills.vscodeIcon} alt="VS Code" />
                 VS Code
               </li>
               <li>
-                <img src="src\icons\icons3\intellij-svgrepo-com.svg"></img>
-                IntelliJ IDEA
+                <img src={assets.skills.intellijIcon} alt="IntelliJ" />
+                IntelliJ
               </li>
               <li>
-                <img src="src\icons\icons3\KiCad-Logo.svg"></img>KiCad
+                <img src={assets.skills.kicadIcon} alt="KiCad" />
+                KiCad
               </li>
               <li className="learning">
-                <img src="src\icons\icons3\stm32.png"></img>STM32CubeIDE
+                <img src={assets.skills.stm32Icon} alt="STM32CubeIDE" />
+                STM32CubeIDE
               </li>
               <li className="learning">
-                <img src="src\icons\icons3\shopify-svgrepo-com.svg"></img>
+                <img src={assets.skills.shopifyIcon} alt="Shopify" />
                 Shopify
               </li>
               <li>
-                <img src="src\icons\icons3\photoshop-cc-logo-svgrepo-com.svg"></img>
+                <img src={assets.skills.photoshopIcon} alt="Photoshop" />
                 Adobe Photoshop
               </li>
               <li>
-                <img src="src\icons\icons3\adobe-after-effects-svgrepo-com.svg"></img>
+                <img src={assets.skills.afterEffectsIcon} alt="After Effects" />
                 Adobe After Effects
               </li>
               <li>
-                <img src="src\icons\icons3\capcut-svgrepo-com.svg"></img>
-                Capcut
+                <img src={assets.skills.capcutIcon} alt="CapCut" />
+                CapCut
               </li>
             </ul>
           </div>
@@ -206,7 +213,7 @@ function AboutView() {
           <h1>Featured Projects</h1>
           <div className="projects-div">
             <div className="featproject-card">
-              <img src="src\images\proj-electrium\pcb3dview.jpg"></img>
+              <img src={assets.electrium.pcb3DView}></img>
               <h3>Electric Skateboard Tail Light System</h3>
               <p>
                 Designed and implemented the tail light system using the
@@ -220,22 +227,19 @@ function AboutView() {
               </a>
             </div>
             <div className="featproject-card">
-              <img src="src\images\proj-imdbwebapp\imdbweb.png"></img>
+              <img src={assets.imdb.imdbWeb}></img>
               <h3>Film Database Web Application</h3>
               <p>
                 Displays movie data using the IMDb API, replicating core
                 functionality of a streaming service interface, integrated
                 Firebase Authentication
               </p>
-              <a
-                className="read-more"
-                href="/projects/#filmweb"
-              >
+              <a className="read-more" href="/projects/#filmweb">
                 Read more →
               </a>
             </div>
             <div className="featproject-card">
-              <img src="src\images\proj\stm32.png"></img>
+              <img src={assets.projects.stm32Img}></img>
               <h3>(Current) Aircraft Embedded Flight Software</h3>
               <p>
                 Program the team’s custom autopilot, ZeroPilot, and verify
@@ -247,6 +251,7 @@ function AboutView() {
               </a>
             </div>
           </div>
+          <a className="seeallprojects-btn">See All Projects</a>
         </section>
 
         <section id="experience">
@@ -257,7 +262,7 @@ function AboutView() {
                 <h2>
                   <img
                     className="deardaisie-logo"
-                    src="src\images\Dear Daisie logo.png"
+                    src={assets.about.dearDaisieLogo}
                   ></img>
                 </h2>
                 <p className="experience-info">
@@ -277,7 +282,11 @@ function AboutView() {
                     Coordinated with manufacturer to translate conceptual
                     designs into finished products
                   </li>
-                  <a href="https://www.deardaisie.com" target="_blank">
+                  <a
+                    href="https://www.deardaisie.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     deardaisie.com
                   </a>
                 </ul>
@@ -312,7 +321,11 @@ function AboutView() {
             </div>
           </div>
         </section>
+        
       </div>
+      <footer className="footer">
+          <p>© 2026 Catherine Huang · Built with React</p>
+        </footer>
     </>
   );
 }

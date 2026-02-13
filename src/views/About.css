@@ -128,7 +128,6 @@ body {
   max-width: 600px;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap");
 .name1,
 .name2 {
   font-family: "Edu NSW ACT Cursive", cursive;
@@ -175,7 +174,7 @@ h1 {
 }
 
 #skills p {
-  padding: 0 40px;
+  padding: 0 0px 20px 40px;
   font-size: 18px;
 }
 
@@ -204,7 +203,6 @@ h3 {
   padding: 0 40px;
   display: grid;
   grid-template-columns: var(--max-width-skills-col) 1fr;
-  align-items: center;
   margin-bottom: 40px;
 }
 
@@ -259,8 +257,7 @@ h3 {
   padding: 20px;
   transition: 0.2s ease;
 }
-.featproject-card:hover {
-  transform: translateY(-2px);
+.featproject-card:hover, .experience-card:hover {
   border-color: var(--accent);
 }
 
@@ -299,6 +296,27 @@ h3 {
   margin-bottom: 2px;
 }
 
+#projects .seeallprojects-btn {
+  font-family: 'Poppins', 'sans-serif';
+  font-size: 18px;
+  padding: 10px 20px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--img-border-radius);
+  background-color: white;
+
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0px auto;
+}
+#projects .seeallprojects-btn:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+
 /* --------------- EXPERIENCE ---------------*/
 #experience {
   max-width: var(--max-width);
@@ -321,6 +339,7 @@ h3 {
   border: 1px solid var(--border-color);
   border-radius: var(--img-border-radius);
   padding: 25px;
+  transition: 0.2s ease;
 }
 
 .experience-text {
@@ -358,4 +377,12 @@ h2 {
 .featproject-card,
 .experience-card {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.footer {
+  padding: 50px 20px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  font-size: 14px;
 }
