@@ -388,7 +388,7 @@ h2 {
 }
 
 @media (max-width: 1024px) {
-  
+
   .hero-container {
     grid-template-columns: 300px 1fr;
     gap: 50px;
@@ -408,7 +408,7 @@ h2 {
 @media (max-width: 768px) {
   /* HERO */
   #hero {
-    padding: 120px 0px 80px 0px;
+    padding: 80px 0;
   }
 
   .hero-container {
@@ -417,47 +417,60 @@ h2 {
     padding: 0 20px;
   }
 
-  .hero-left {
-    align-items: center;
-  }
-
   .portrait {
-    max-width: 280px;
+    max-width: 300px;
+    margin: 0 auto 20px auto;
+    border-radius: 20px;
   }
 
   .hero-buttons {
     justify-content: center;
-    flex-wrap: wrap;
     gap: 15px;
+    margin-top: 5px;
   }
 
-  .hero-right {
-    max-width: 100%;
+  .linkedin,
+  .github,
+  .email {
+    width: 36px;
+  }
+
+  .resume-btn {
+    font-size: 14px;
+    padding: 6px 14px;
   }
 
   .name1,
   .name2 {
     font-size: 48px;
     text-align: center;
+    letter-spacing: 0.02em;
   }
 
   .name2 {
     margin-right: 0;
+  }
+
+  .hero-right {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 10px;
     text-align: center;
   }
 
-  p {
+  .hero-right p {
     font-size: 15px;
-    padding: 0px 20px;
-  }
-  #hero p {
-    text-align: center;
+    line-height: 1.6;
   }
 
 
   /* SKILLS */
   #skills {
     padding: 80px 0;
+  }
+
+  h1 {
+    font-size: 35px;
   }
 
   #skills p {
