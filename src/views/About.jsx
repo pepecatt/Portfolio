@@ -139,7 +139,7 @@ function AboutView() {
                 <img src={assets.skills.solidworksIcon} alt="SolidWorks" />
                 SolidWorks
               </li>
-              <li className="learning">
+              <li>
                 <img src={assets.skills.matlabIcon} alt="MATLAB" />
                 MATLAB
               </li>
@@ -167,7 +167,7 @@ function AboutView() {
                 <img src={assets.skills.kicadIcon} alt="KiCad" />
                 KiCad
               </li>
-              <li className="learning">
+              <li>
                 <img src={assets.skills.stm32Icon} alt="STM32CubeIDE" />
                 STM32CubeIDE
               </li>
@@ -195,8 +195,10 @@ function AboutView() {
               <li>PCBs, </li>
               <li>Microcontrollers: </li>
               <li>ATmega328P,</li>
-              <li className="learning">STM32, </li>
+              <li className="learning">Raspberry Pi, </li>
+              <li className="learning">ESP32, </li>
               <li>Soldering, </li>
+              <li>3D Printing, </li>
               <li>Breadboarding, </li>
               <li>Micropipetting </li>
             </ul>
@@ -241,19 +243,19 @@ function AboutView() {
               </a>
             </div>
             <div className="featproject-card">
-              <img src={assets.projects.stm32Img}></img>
               <h3>(Current) Aircraft Embedded Flight Software</h3>
               <p>
-                Program the team’s custom autopilot, ZeroPilot, and verify
-                flight control functionality using C, C++, and STM32-based
-                hardware
+                Developing a hardware-in-the-loop (HIL) simulator to test flight
+                controller behavior using simulated sensor input. Implementing
+                UART communication between a Raspberry Pi and an ESP32 to
+                transmit the data. Using C and C++ with Quarc (MATLAB/Simulink)
+                software.
               </p>
-              <a href="/projects/#efs" className="read-more">
-                Read more →
-              </a>
             </div>
           </div>
-          <a href="/projects" className="seeallprojects-btn">See All Projects</a>
+          <a href="/projects" className="seeallprojects-btn">
+            See All Projects
+          </a>
         </section>
 
         <section id="experience">
@@ -323,11 +325,10 @@ function AboutView() {
             </div>
           </div>
         </section>
-        
       </div>
       <footer className="footer">
-          <p>© 2026 Catherine Huang · Built with React</p>
-        </footer>
+        <p>© 2026 Catherine Huang · Built with React</p>
+      </footer>
     </>
   );
 }

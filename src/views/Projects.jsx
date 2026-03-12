@@ -199,23 +199,19 @@ function ProjectsView() {
           <div className="project-card">
             <div className="project-card-text">
               <div className="project-content">
-                <h3 id="efs">(Current) Aircraft Embedded Flight Software </h3>
+                <h3>Embedded Motor Control System </h3>
                 <div>
-                  <p>
-                    Program the team’s custom autopilot, ZeroPilot, and verify
-                    flight control functionality using C, C++, and STM32-based
-                    hardware
-                  </p>
-                  <p>What I've done so far:</p>
                   <ul className="bulleted-list">
                     <li>
-                      Designed and implemented firmware to read analog input
-                      from an external ADC over SPI and translate it into a PWM
-                      signal for motor speed/position control
+                      Developed embedded firmware in C to read analog input from
+                      an external ADC via SPI
                     </li>
                     <li>
-                      Configured STM32 peripherals including SPI and timer
-                      modules
+                      Generated PWM signals using STM32 timer peripherals to
+                      control motor speed and position
+                    </li>
+                    <li>
+                      Configured and tested STM32 peripherals using STM32CubeIDE
                     </li>
                   </ul>
                 </div>
@@ -227,15 +223,7 @@ function ProjectsView() {
                     <img src={assets.skills.cppIcon} />
                     C++
                   </li>
-                  <li>Microcontrollers: STM32</li>
                 </ul>
-              </div>
-
-              <div className="project-links">
-                <a target="_blank" rel="noopener noreferrer">
-                  {" "}
-                  Github link
-                </a>
               </div>
             </div>
             <img src={assets.projects.stm32Img}></img>
@@ -285,48 +273,6 @@ function ProjectsView() {
           <div className="project-card">
             <div className="project-card-text">
               <div className="project-content">
-                <h3>United Nations Habitat Hackathon (2nd Place) </h3>
-                <div>
-                  <p>
-                    Our pitch for WellNest: an AI-powered network of healthcare
-                    kiosks providing basic diagnostics and location-based
-                    referrals in Waterloo, particularly for unhoused residents.
-                  </p>
-                  <ul className="bulleted-list">
-                    <li>
-                      Wrote the presentation script, edited the final pitch
-                      video
-                    </li>
-                    <li>
-                      Designed outreach strategy and user flow for kiosk
-                      experience and web map connecting users to nearby
-                      healthcare resources
-                    </li>
-                  </ul>
-                </div>
-                <ul className="project-skills">
-                  <li>Web App </li>
-                  <li>Project Management</li>
-                  <li>Video Editing </li>
-                </ul>
-              </div>
-
-              <div className="project-links">
-                <a
-                  href="https://uwaterloo.ca/engineering/news/students-design-quality-life-solutions-habitat"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Results posted by UWaterloo (and our final video submission)
-                </a>
-              </div>
-            </div>
-            <img src={assets.projects.hackathonImg}></img>
-          </div>
-
-          <div className="project-card">
-            <div className="project-card-text">
-              <div className="project-content">
                 <h3>Streamlit Web Application </h3>
                 <p>
                   An interactive data analysis web app hosted via Streamlit that
@@ -334,6 +280,10 @@ function ProjectsView() {
                   files for statistical analysis
                 </p>
                 <ul className="project-skills">
+                  <li>
+                    <img src={assets.skills.pythonIcon} alt="Python" />
+                    Python
+                  </li>
                   <li>
                     <img src={assets.skills.numpyIcon} />
                     Numpy
@@ -356,8 +306,37 @@ function ProjectsView() {
             </div>
             <img src={assets.projects.streamlitImg}></img>
           </div>
+
+          <div className="project-card">
+            <div className="project-card-text">
+              <div className="project-content">
+                <h3>Various SolidWorks Projects </h3>
+                <ul className="project-skills">
+                  <li>
+                    <img src={assets.skills.solidworksIcon} alt="SolidWorks" />
+                    SolidWorks
+                  </li>
+                  <li>3D Printing</li>
+                </ul>
+              </div>
+            </div>
+            <div id="showmore">
+              <li>
+                <img src={assets.solidworks.solidworks1} />
+              </li>
+              <li className="pcb12">
+                <img src={assets.solidworks.solidworks2a} />
+                <img src={assets.solidworks.solidworks2b} />
+              </li>
+              <li className="pcb12">
+                <img src={assets.solidworks.solidworks3a} />
+                <img src={assets.solidworks.solidworks3b} />
+              </li>
+            </div>
+          </div>
         </div>
       </div>
+
       <footer className="footer">
         <p>© 2026 Catherine Huang · Built with React</p>
       </footer>

@@ -62,11 +62,19 @@ import firebaseView from "./images/proj-imdbwebapp/firebase.png";
 import settingsView from "./images/proj-imdbwebapp/settingsview.png";
 
 /* ===============================
+   Solidworks Projects
+================================ */
+import solidworks1 from "./images/proj-solidworks/solidworks1.png";
+import solidworks2a from "./images/proj-solidworks/solidworks2a.png";
+import solidworks2b from "./images/proj-solidworks/solidworks2b.png";
+import solidworks3a from "./images/proj-solidworks/solidworks3a.png";
+import solidworks3b from "./images/proj-solidworks/solidworks3b.jpeg";
+
+/* ===============================
    Other Projects
 ================================ */
 import stm32Img from "./images/proj/stm32.png";
 import websiteImg from "./images/proj/website.png";
-import hackathonImg from "./images/proj/hackathon.png";
 import streamlitImg from "./images/proj/streamlit.png";
 
 export const assets = {
@@ -129,10 +137,17 @@ export const assets = {
     settingsView,
   },
 
+  solidworks: {
+    solidworks1,
+    solidworks2a,
+    solidworks2b,
+    solidworks3a,
+    solidworks3b
+  },
+
   projects: {
     stm32Img,
     websiteImg,
-    hackathonImg,
     streamlitImg,
   },
 

@@ -31,7 +31,7 @@
   gap: 40px;
   padding: 30px;
 
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   background-color: white;
   border-radius: var(--img-border-radius);
 
@@ -81,7 +81,7 @@
   display: flex;
   align-items: center;
   border: 1px solid var(--border-color);
-  background-color: #F5F3EF;
+  background-color: #f5f3ef;
   border-radius: 20px;
   padding: 4px 10px;
   font-size: 14px;
@@ -140,10 +140,7 @@
   margin-left: 15px;
 }
 
-
-
 @media (max-width: 1024px) {
-
   .projects-list {
     max-width: 95%;
   }
@@ -152,11 +149,9 @@
     grid-template-columns: 1fr 320px;
     gap: 30px;
   }
-
 }
 
 @media (max-width: 768px) {
-
   .projects-h1 {
     font-size: 32px;
     text-align: center;
@@ -205,5 +200,4 @@
   #showmore li.pcb12 img {
     width: 100%;
   }
-
 }
